@@ -1,0 +1,24 @@
+[package]
+name = "jvm-sys"
+authors = ["Chris Moore <dev@chrismoore.dev>"]
+version = "0.1.0" # remember to update html_root_url
+edition = "2018"
+license = "MIT OR Apache-2.0"
+description = "Bindings for a JVM's provided headers"
+repository = "https://github.com/chrismooredev/jvm-sys-rs"
+keywords = ["java", "jvm", "ffi", "bindings", "jni", "graphics", "cross-platform"]
+categories = ["external-ffi-bindings"]
+links = "jvm"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[build-dependencies]
+jvm-find = "0.1.0"
+bindgen = "0.59.1"
+
+[features]
+default = ["link", "jni"]
+link = []
+jni = []
+jawt = []
+jvmti = []
